@@ -25,12 +25,12 @@ class Phase {
   Phase& operator*=(Phase& p);
   Phase& operator/=(Phase& p);
 
- private:
-  uint32_t phase_;
-
   const static uint32_t DOUBLE_PI = 0xffffffff;
   const static uint32_t PI = 0x8fffffff;
   const static uint32_t HALf_PI = 0x4fffffff;
+
+ private:
+  uint32_t phase_;
 };
 
 Phase& operator+(Phase& p1, Phase& p2);
