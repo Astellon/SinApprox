@@ -29,5 +29,9 @@ time (using double phase)
 time (using uint32 phase)
  table::sin time : 19628300 (3.32128x faster)
  pade::sin time  : 27823800 (2.343x faster)
- 
+
 ```
+
+## 覚書
+
+簡単な記録をdoc.mdに残しておいたので気になる人は見てください。
