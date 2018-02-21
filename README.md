@@ -34,4 +34,4 @@ time (using uint32 phase)
 
 ## 覚書
 
-簡単な記録をdoc.mdに残しておいたので気になる人は見てください。
+簡単な記録を[doc.md](https://github.com/Astellon/SinApprox/blob/master/doc.md)に残しておいたので気になる人は見てください。
