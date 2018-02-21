@@ -83,11 +83,9 @@ class SinTable {
     if (p32 & 0x40000000) p32_masked ^= 0x3fffffff;  // bit flip
     std::uint8_t p8 = p32_masked >> 22;  // use 8bit;
 
-
     uint64_t p64 = p32_masked;
     p64 = 0x3ff0000000000000 | (p64 << 30);
     double inter = (*((double*)&p64) - 1.0);
-
 
     return (p32 & 0x80000000)
     ? -((table_[p8+1] - table_[p8])*inter + table_[p8])
