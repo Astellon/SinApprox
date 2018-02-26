@@ -39,9 +39,8 @@ int main() {
   auto start1 = std::chrono::system_clock::now();
   for (int rep = 0; rep < repeat; rep++) {
     for (int i = 0; i < buffer_size; i++) {
-      sample = std::sin(angle);
-      angle += angle_delta;
-      if (angle > 2*approx::PI) angle -= 2*approx::PI;
+      sample = std::sin(phase.toDouble());
+      phase += phase_delta;
     }
   }
   auto end1 = std::chrono::system_clock::now();
