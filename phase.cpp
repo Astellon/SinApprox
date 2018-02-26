@@ -21,56 +21,56 @@ Phase::Phase(float p) {
 
 Phase::~Phase() {}
 
-double Phase::toDouble() {
+double Phase::toDouble() const {
   return double(phase_)/UINT32_MAX * 2 * 3.14159265358979323846;
 }
 
-float Phase::toFloat() {
+float Phase::toFloat() const {
   return (float)toDouble();
 }
 
-std::uint32_t Phase::getRawValue() {
+std::uint32_t Phase::getRawValue() const {
   return phase_;
 }
 
-Phase& Phase::operator=(Phase& p) {
+Phase& Phase::operator=(const Phase& p) {
   phase_ = p.getRawValue();
   return *this;
 }
 
-Phase& Phase::operator+=(Phase& p) {
+Phase& Phase::operator+=(const Phase& p) {
   phase_ += p.getRawValue();
   return *this;
 }
 
-Phase& Phase::operator-=(Phase& p) {
+Phase& Phase::operator-=(const Phase& p) {
   phase_ -= p.getRawValue();
   return *this;
 }
 
-Phase& Phase::operator*=(Phase& p){
+Phase& Phase::operator*=(const Phase& p){
   phase_ *= p.getRawValue();
   return *this;
 }
 
-Phase& Phase::operator/=(Phase& p) {
+Phase& Phase::operator/=(const Phase& p) {
   phase_ /= p.getRawValue();
   return *this;
 }
 
-Phase& operator+(Phase& p1, Phase& p2) {
+Phase& operator+(const Phase& p1, const Phase& p2) {
   return Phase(p1) += p2;
 }
 
-Phase& operator-(Phase& p1, Phase& p2) {
+Phase& operator-(const Phase& p1, const Phase& p2) {
   return Phase(p1) -= p2;
 }
 
-Phase& operator*(Phase& p1, Phase& p2) {
+Phase& operator*(const Phase& p1, const Phase& p2) {
   return Phase(p1) *= p2;
 }
 
-Phase& operator/(Phase& p1, Phase& p2) {
+Phase& operator/(const Phase& p1, const Phase& p2) {
   return Phase(p1) /= p2;
 }
 }  // namespace synth
