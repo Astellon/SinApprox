@@ -44,7 +44,7 @@ int main() {
     }
   }
   auto end1 = std::chrono::system_clock::now();
-	auto dur1 = end1 - start1;
+  auto dur1 = end1 - start1;
 
 
   auto start2 = std::chrono::system_clock::now();
@@ -55,8 +55,8 @@ int main() {
       if (angle > 2*approx::PI) angle -= 2*approx::PI;
     }
   }
-	auto end2 = std::chrono::system_clock::now();
-	auto dur2 = end2 - start2;
+  auto end2 = std::chrono::system_clock::now();
+  auto dur2 = end2 - start2;
 
   auto start3 = std::chrono::system_clock::now();
   for (int rep = 0; rep < repeat; rep++) {
@@ -66,8 +66,8 @@ int main() {
       if (angle > 2*approx::PI) angle -= 2*approx::PI;
     }
   }
-	auto end3 = std::chrono::system_clock::now();
-	auto dur3 = end3 - start3;
+  auto end3 = std::chrono::system_clock::now();
+  auto dur3 = end3 - start3;
 
   auto start4 = std::chrono::system_clock::now();
   for (int rep = 0; rep < repeat; rep++) {
@@ -76,8 +76,8 @@ int main() {
       phase += phase_delta;
     }
   }
-	auto end4 = std::chrono::system_clock::now();
-	auto dur4 = end4 - start4;
+  auto end4 = std::chrono::system_clock::now();
+  auto dur4 = end4 - start4;
 
   auto start5 = std::chrono::system_clock::now();
   for (int rep = 0; rep < repeat; rep++) {
@@ -86,8 +86,8 @@ int main() {
       phase += phase_delta;
     }
   }
-	auto end5 = std::chrono::system_clock::now();
-	auto dur5 = end5 - start5;
+  auto end5 = std::chrono::system_clock::now();
+  auto dur5 = end5 - start5;
 
   int dur1_i = std::chrono::duration_cast<std::chrono::nanoseconds>(dur1).count();
   int dur2_i = std::chrono::duration_cast<std::chrono::nanoseconds>(dur2).count();

@@ -16,7 +16,7 @@ double sin(double angle) {
     return sinZeroToHalfPi(angle);
   } else if (angle < PI) {
     return sinZeroToHalfPi(PI - angle);
-  } else if (angle < 3*PI/2){
+  } else if (angle < 3*PI/2) {
     return -1.0 * sinZeroToHalfPi(angle - PI);
   } else if (angle < 2*PI) {
     return -1.0 * sinZeroToHalfPi(2*PI - angle);
@@ -63,7 +63,7 @@ class SinTable {
       return sinZeroToHalfPi(angle);
     } else if (angle < PI) {
       return sinZeroToHalfPi(PI - angle);
-    } else if (angle < 3*PI/2){
+    } else if (angle < 3*PI/2) {
       return -1.0 * sinZeroToHalfPi(angle - PI);
     } else if (angle < 2*PI) {
       return -1.0 * sinZeroToHalfPi(2*PI - angle);
