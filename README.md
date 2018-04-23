@@ -6,7 +6,7 @@
 ## テスト
 
 ```
-$ g++ -std=c++11 -O3 phase.cpp test.cpp
+$ g++ -std=c++11 -O3 phase.cpp sin.cpp test.cpp
 $ ./a.out
 ```
 
