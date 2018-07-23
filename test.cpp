@@ -123,5 +123,30 @@ int main() {
   }
   std::cout << "double + table::sin : " << time << std::endl;
 
+  // Phase + compiletime_table::sin
+  {
+    Timer<NS> T(&time);
+    for (int rep = 0; rep < repeat; rep++) {
+      for (int i = 0; i < buffer_size; i++) {
+        sample = approx::compiletime_table::sin(phase);
+        phase += phase_delta;
+      }
+    }
+  }
+  std::cout << "Phase + compiletime_table::sin : " << time << std::endl;
+
+  // double + compiletime_table::sin
+  {
+    Timer<NS> T(&time);
+    for (int rep = 0; rep < repeat; rep++) {
+      for (int i = 0; i < buffer_size; i++) {
+        sample = approx::compiletime_table::sin(angle);
+        angle += angle_delta;
+        if (angle > 2*approx::PI) angle -= 2*approx::PI;
+      }
+    }
+  }
+  std::cout << "double + compiletime_table::sin : " << time << std::endl;
+
   return 0;
 }

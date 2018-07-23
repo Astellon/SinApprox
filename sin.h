@@ -18,4 +18,9 @@ double sin(double angle);
 double sin(Phase angle);
 }  // namespace table
 
+namespace compiletime_table {
+double sin(double angle);
+double sin(Phase angle);
+}
+
 }  // namespace approx
