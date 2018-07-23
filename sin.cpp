@@ -118,7 +118,7 @@ constexpr auto table = SinTable<N>();
 double sinZeroToHalfPi(double angle) {
   double inter = angle * N * 2 / PI;
   int index = static_cast<int>(inter);
-  return (table.get(index + 1) - table.get(index))*(inter - index) + table.get(index);
+  return (table.get(index+1)-table.get(index))*(inter-index)+table.get(index);
 }
 
 double sin(double angle) {
