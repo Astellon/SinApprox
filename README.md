@@ -19,14 +19,14 @@ error (root mean square)
  error of table (double) : 2.43027e-06
  error of pade           : 0.000195134
 
-Phase + std::sin : 83865500
-double + std::sin : 71040800
-Phase + pade::sin : 63429700
-double + pade::sin : 71208700
-Phase + table::sin : 41760500
-double + table::sin : 104303300
-Phase + compiletime_table::sin : 44115100
-double + compiletime_table::sin : 92178400
+Phase + std::sin : 78151800
+double + std::sin : 64284000
+Phase + pade::sin : 26003800
+double + pade::sin : 26097500
+Phase + table::sin : 20556500
+double + table::sin : 37800000
+Phase + compiletime_table::sin : 14457300
+double + compiletime_table::sin : 36753500
 ```
 
 ## 覚書
