@@ -6,11 +6,7 @@
 ## テスト
 
 ```
-<<<<<<< HEAD
-$ g++ -std=c++11 -O3 sin.cpp phase.cpp test.cpp
-=======
-$ g++ -std=c++11 -O3 phase.cpp sin.cpp test.cpp
->>>>>>> f1c112d8acfaab76fe808a6df501d999696f2c32
+$ g++ -std=c++14 -O3 phase.cpp sin.cpp test.cpp
 $ ./a.out
 ```
 
