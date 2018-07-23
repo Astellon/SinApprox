@@ -2,7 +2,7 @@
 
 template<int N>
 struct SinTable {
-  const double pi = 3.1425926535;
+  const double pi = 3.141592653589793;
   double table[N+1];
 
   constexpr SinTable() : table() {

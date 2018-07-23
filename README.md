@@ -19,16 +19,18 @@ $ ./a.out
 参考までに手元での結果を示す。
 ```
 error (root mean square)
- error of table (uint32) : 0.707105
- error of table (double) : 0.707105
- error of pade           : 0.706958
+ error of table (uint32) : 2.43049e-06
+ error of table (double) : 2.43027e-06
+ error of pade           : 0.000195134
 
-Phase + std::sin : 79551700
-double + std::sin : 68806800
-Phase + pade::sin : 25896600
-double + pade::sin : 26198400
-Phase + table::sin : 21641900
-double + table::sin : 38154200
+Phase + std::sin : 83865500
+double + std::sin : 71040800
+Phase + pade::sin : 63429700
+double + pade::sin : 71208700
+Phase + table::sin : 41760500
+double + table::sin : 104303300
+Phase + compiletime_table::sin : 44115100
+double + compiletime_table::sin : 92178400
 ```
 
 ## 覚書

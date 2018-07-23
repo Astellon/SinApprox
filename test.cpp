@@ -27,16 +27,15 @@ int main() {
     for (int i = 0; i < buffer_size; i++) {
       sample = std::sin(phase.toDouble());
 
-      double dif_pade = sample - approx::pade::sin(angle);
-      double dif_table = sample - approx::table::sin(angle);
-      double dif_table_inter = sample - approx::table::sin(angle);
+      double dif_pade = sample - approx::pade::sin(phase);
+      double dif_table = sample - approx::table::sin(phase);
+      double dif_table_d = sample - approx::table::sin(phase.toDouble());
       // mean squared error
       err_pade += dif_pade * dif_pade;
       err_table += dif_table * dif_table;
-      err_table_d += dif_table_inter * dif_table_inter;
+      err_table_d += dif_table_d * dif_table_d;
 
-      angle += angle_delta;
-      if (angle > 2*approx::PI) angle -= 2*approx::PI;
+      phase += phase_delta;
       sample = 0;
     }
   }
