@@ -4,9 +4,8 @@ namespace approx {
 
 namespace pade {
 double sinZeroToHalfPi(double angle) {
-  // return -7.0/3.0*angle + 200.0/3.0*angle/(20.0 + angle*angle);
-  return angle*(11.0/60.0*angle*angle - 137.0/10.0
-                 + 37044.0/60.0/(angle*angle+42.0));
+  double angle2 = angle * angle;
+  return (10.8*angle2-252)*(angle2-10)*angle / (2520 + 60 * angle2);
 }
 
 double sin(double angle) {
